@@ -3,18 +3,9 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
 import About from "./components/About";
-
+import Home from "./components/Home";
 import { FaTwitter, FaInstagram, FaYoutube, FaFacebook } from "react-icons/fa";
 import Admissions from "./components/Admissions";
-
-function Home() {
-  return (
-    <>
-      <Hero />
-      <Features />
-    </>
-  );
-}
 
 function App() {
   return (

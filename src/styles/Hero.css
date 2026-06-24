@@ -1,30 +1,129 @@
 .hero {
-  height: 100vh;
-  background: url("https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9")
-    center/cover no-repeat;
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      to right,
+      rgba(8, 28, 61, 0.85),
+      rgba(8, 28, 61, 0.45)
+    ),
+    url("https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 0 8%;
 }
 
-.overlay {
-  text-align: center;
+.hero-content {
+  max-width: 700px;
   color: white;
-  background: rgba(0,0,0,0.5);
-  padding: 40px;
-  border-radius: 10px;
 }
 
-.overlay h1 {
-  font-size: 4rem;
-}
-
-.overlay button {
-  margin-top: 20px;
-  padding: 12px 30px;
-  background: #ff9800;
-  border: none;
-  color: white;
+.hero-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  padding: 10px 20px;
   border-radius: 30px;
+  backdrop-filter: blur(10px);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.hero-content h1 {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-bottom: 35px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.primary-btn {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 50px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: .4s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-5px);
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 15px 35px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: .4s;
+}
+
+.secondary-btn:hover {
+  background: white;
+  color: #0d2b5c;
+}
+
+.hero-boxes {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.box {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  padding: 20px 25px;
+  border-radius: 15px;
+  min-width: 160px;
+}
+
+.box h3 {
+  color: #ffb703;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.box p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media(max-width:768px){
+
+  .hero{
+    padding: 0 20px;
+    text-align:center;
+    justify-content:center;
+  }
+
+  .hero-content h1{
+    font-size: 2.8rem;
+  }
+
+  .hero-btns{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  .hero-boxes{
+    justify-content:center;
+  }
 }
