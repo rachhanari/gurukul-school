@@ -1,11 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import About from "./components/About";
 import Home from "./components/Home";
-import { FaTwitter, FaInstagram, FaYoutube, FaFacebook } from "react-icons/fa";
+import About from "./components/About";
 import Admissions from "./components/Admissions";
+import Footer from "./components/Footer";
+
+import {
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+  FaFacebook,
+} from "react-icons/fa";
 
 function App() {
   return (
@@ -79,13 +84,18 @@ function App() {
         <a href="#contact">Enquire Now</a>
       </div>
 
+      {/* Navbar */}
       <Navbar />
 
+      {/* Pages */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/admission" element={<Admissions />} />
       </Routes>
+
+      {/* Footer - All Pages */}
+      <Footer />
     </BrowserRouter>
   );
 }
